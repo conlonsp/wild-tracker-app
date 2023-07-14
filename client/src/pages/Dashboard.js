@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../Context'
+import Chart from './Chart'
 
 function Dashboard() {
   const { user, setUser } = useContext(UserContext)
@@ -31,14 +32,7 @@ function Dashboard() {
              <p>Start donating to view progress!</p>
             }
           </ul>
-          {/* <PlotFigure
-            options={{
-              marks: [
-                Plot.barY(penguins, {x: "organization_name", y: "amount", fill: "organization_name"}),
-                Plot.frame()
-              ]
-            }}
-          /> */}
+          <Chart donations={donations} />
         </div>
       :
         <div>
