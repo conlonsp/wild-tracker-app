@@ -3,6 +3,10 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :user_organizations
 
+  # def donations
+  #   user_organizations = UserOrganization.all
+  # end
+
   # def find_user_orgs
   #   user_orgs = UserOrganization.all
   #   my_uos = user_orgs.select(|uo| org.user_id == session[:user_id])
