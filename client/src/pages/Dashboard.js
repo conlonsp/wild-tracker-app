@@ -23,11 +23,15 @@ function Dashboard() {
           <h1>Dashboard</h1>
           <p>Welcome, {user.username}!</p>
           <ul>
-            {donations.map(d => {
-              return (
-                <li key={d.id}>{d.amount} || {d.organization_name}</li>
-              )
-            })}
+            {/* {donations ?
+              donations.map(d => {
+                return (
+                  <li key={d.id}>{d.amount} || {d.organization_name}</li>
+                )
+              })
+            : 
+             null
+            } */}
           </ul>
           {/* <PlotFigure
             options={{

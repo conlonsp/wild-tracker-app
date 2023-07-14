@@ -4,8 +4,10 @@ class UsersController < ApplicationController
   def create
     user = User.create!(user_params)
     session[:user_id] = user.id
-    render json: user, include: ['user_organizations', 'user_organizations.donations'],status: :created
+    render json: user, status: :created
   end
+
+  # include: ['user_organizations', 'user_organizations.donations'],
 
   def show
     render json: User.find(session[:user_id]), status: :ok
@@ -25,3 +27,4 @@ class UsersController < ApplicationController
     render json: { errors: ['User not found'] }, status: :unauthorized
   end
 end
+

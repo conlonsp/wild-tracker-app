@@ -84,3 +84,13 @@ function LoginForm({ setToLogin }) {
 }
 
 export default LoginForm
+
+// {errors ?
+//   errors.map(err => {
+//     return (
+//       <p key={err} style={{color: 'red'}}>{err}</p>
+//     )
+//   })
+// :
+//   null
+// }
