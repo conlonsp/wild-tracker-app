@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../Context'
-// import * as Plot from "@observablehq/plot";
-// import PlotFigure from '../components/PlotFigure';
 
 function Dashboard() {
   const { user, setUser } = useContext(UserContext)
@@ -23,15 +21,15 @@ function Dashboard() {
           <h1>Dashboard</h1>
           <p>Welcome, {user.username}!</p>
           <ul>
-            {/* {donations ?
+            {donations ?
               donations.map(d => {
                 return (
                   <li key={d.id}>{d.amount} || {d.organization_name}</li>
                 )
               })
             : 
-             null
-            } */}
+             <p>Start donating to view progress!</p>
+            }
           </ul>
           {/* <PlotFigure
             options={{
