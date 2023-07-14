@@ -1,0 +1,3 @@
+class UserOrganizationsController < ApplicationController
+
+end
