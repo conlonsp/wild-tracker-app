@@ -2,16 +2,12 @@ import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../Context'
 import Chart from './Chart'
 
-function Dashboard() {
+function Dashboard({ donations }) {
   const { user, setUser } = useContext(UserContext)
 
-  const [donations, setDonations] = useState([])
+  
 
-  useEffect(() => {
-    fetch('/donations')
-    .then(r => r.json())
-    .then(donations => setDonations(donations))
-  }, [])
+
   
   
 

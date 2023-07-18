@@ -25,6 +25,7 @@ function App() {
   const [errors, setErrors] = useState([])
   const [orgId, setOrgId] = useState(null)
   const [orgProjects, setOrgProjects] = useState([])
+  const [donations, setDonations] = useState([])
 
   useEffect(() => {
     fetch('/me').then(r => {
@@ -36,7 +37,11 @@ function App() {
     })
   }, [])
 
-  
+  useEffect(() => {
+    fetch('/donations')
+    .then(r => r.json())
+    .then(donations => setDonations(donations))
+  }, [])
 
   useEffect(() => {
     fetch('/organizations')
@@ -73,7 +78,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={
-          <Dashboard />
+          <Dashboard donations={donations} />
         }/>
         <Route path='/loginsignup' element={
           <LoginSignup />
@@ -96,6 +101,8 @@ function App() {
               grabId={grabId}
               orgProjects={orgProjects}
               setOrgProjects={setOrgProjects}
+              donations={donations}
+              setDonations={setDonations}
             />
           }/>
           <Route path='new' element={

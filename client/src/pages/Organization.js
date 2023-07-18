@@ -4,7 +4,7 @@ import { UserContext } from '../Context'
 
 import DonationForm from '../components/DonationForm'
 
-function Organization({ organization, setOrganization, onDelete, grabId, orgProjects, setOrgProjects}) {
+function Organization({ organization, setOrganization, onDelete, grabId, orgProjects, setOrgProjects, donations, setDonations}) {
 
   const { user } = useContext(UserContext)
 
@@ -61,7 +61,11 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
           <button onClick={() => navigate(`/organizations/${params.id}/update`)}>Update</button>
           <button onClick={deleteOrg}>Delete</button>
           <button onClick={() => navigate('/projects/create')}>New Project</button>
-          <DonationForm orgId={organization.id} />
+          <DonationForm
+            orgId={organization.id}
+            donations={donations}
+            setDonations={setDonations}
+          />
         </div>
       :
         <p>{errors}</p>

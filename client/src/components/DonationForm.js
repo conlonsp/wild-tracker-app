@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function DonationForm({ orgId }) {
+function DonationForm({ orgId, donations, setDonations }) {
 
   const [donation, setDonation] = useState({
     amount: '',
@@ -31,6 +31,7 @@ function DonationForm({ orgId }) {
             amount: '',
             note: '',
           })
+          setDonations([...donations, donation])
         })
       }
     })
