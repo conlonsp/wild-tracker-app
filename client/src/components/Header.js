@@ -22,7 +22,7 @@ function Header() {
   
   return (
     <div>
-      <h1>This is the Header</h1>
+      <h1>Wild Tracker</h1>
       <button onClick={handleLogout}>{user ? "Logout" : "Login"}</button>
       <NavBar />
     </div>

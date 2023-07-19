@@ -1,15 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { UserContext } from '../Context'
 import Chart from './Chart'
 
 function Dashboard({ donations }) {
-  const { user, setUser } = useContext(UserContext)
-
-  
-
-
-  
-  
+  const { user } = useContext(UserContext)
 
   return (
     <div>

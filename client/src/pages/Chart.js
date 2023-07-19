@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
+
 function Chart({ donations }) {
   const svgRef = useRef(null);
 
@@ -44,79 +45,24 @@ function Chart({ donations }) {
       .data(donations)
       .enter()
       .append("rect")
-      .attr("x", d => x(d.name))
+      .attr("x", d => x(d.organization_name))
       .attr("y", d => y(d.amount))
       .attr("width", x.bandwidth())
       .attr("height", d => height - y(d.amount))
       .attr("fill", "#69b3a2");
+
+    // Clean up function to remove SVG content when component unmounts or donations change
+    return () => {
+      d3.select(svgRef.current).selectAll('*').remove();
+    };
   }, [donations]);
 
   return (
     <div>
-      <h1>Bar Chart</h1>
+      <h1>Your Donation Progress</h1>
       <div ref={svgRef}></div>
     </div>
   );
 }
 
 export default Chart;
-
-// import React from 'react'
-// import * as d3 from 'd3';
-// import AxisBottom from './AxisBottom';
-
-// function Chart({ donations }) {
-
-//   const margin = { top: 0, right: 0, bottom: 0, left: 0 };
-//   const width = 500 - margin.left - margin.right;
-//   const height = 300 - margin.top - margin.bottom;
-
-//   console.log(donations)
-
-//   const scaleX = d3.scaleBand()
-//     .domain(donations.map((d) => d.organization_name))
-//     .range([0, width]);
-
-
-//   return (
-//     <div>
-//       <h1>Donation Chart</h1>
-//       <svg
-//         // width={width + margin.left + margin.right}
-//         // height={height + margin.top + margin.bottom}
-//         width="500" height="300" style={{ border: "1px solid black" }}
-//       >
-//       <g transform={`translate(${margin.left}, ${margin.top})`}>
-//         <AxisBottom scale={scaleX} transform={`translate(0, ${height})`} />
-//       </g>
-//     </svg>
-//     </div>
-
-//   )
-// }
-
-// export default Chart;
-
-      {/* <svg width={width} height={height}>
-        <path
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          d={line(donations)}
-        />
-        <g fill="white" stroke="currentColor" stroke-width="1.5">
-          {donations.map((d, i) => (
-            <circle key={i} cx={x(i)} cy={y(d)} r="2.5" />
-          ))}
-        </g>
-      </svg> */}
-
-  // const x = d3.scaleLinear(
-  //   [0, donations.length - 1],
-  //   [marginLeft, width - marginRight]
-  // );
-
-  
-  // const y = d3.scaleLinear(d3.extent(donations), [height - marginBottom, marginTop]);
-  // console.log(`x: ${x}, y: ${y}`)
-  // const line = d3.line((d, i) => x(i), y);

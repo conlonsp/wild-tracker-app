@@ -27,6 +27,8 @@ function App() {
   const [orgProjects, setOrgProjects] = useState([])
   const [donations, setDonations] = useState([])
 
+  console.log(donations)
+
   useEffect(() => {
     fetch('/me').then(r => {
       if(r.ok) {
@@ -41,7 +43,7 @@ function App() {
     fetch('/donations')
     .then(r => r.json())
     .then(donations => setDonations(donations))
-  }, [])
+  }, [user])
 
   useEffect(() => {
     fetch('/organizations')
@@ -129,7 +131,7 @@ function App() {
           />
         }/>
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
