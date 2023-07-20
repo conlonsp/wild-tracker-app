@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../Context';
 import { Route, Routes } from 'react-router-dom';
 
-// import logo from '../logo.svg';
 import '../App.css';
 
 import Dashboard from '../pages/Dashboard';
@@ -16,6 +15,8 @@ import Footer from './Footer';
 import CreateOrg from "../pages/CreateOrg";
 import UpdateOrg from "../pages/UpdateOrg";
 import CreateProj from "../pages/CreateProj"
+
+import background from '../images/leaves.jpg'
 
 function App() {
   const { user, setUser } = useContext(UserContext)
@@ -76,7 +77,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundImage: `url(${background})`}}>
       <Header />
       <Routes>
         <Route path='/' element={

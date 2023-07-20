@@ -1,7 +1,16 @@
-/* .App {
+.App {
   text-align: center;
-  background-color: blue;
-} */
+  background-repeat: no-repeat;
+  background-size: 100% 100%; /* This will scale the image to cover the entire container */
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set a fixed width to ensure the image stays the same size */
+  height: 100%; /* Set a fixed height to ensure the image stays the same size */
+  z-index: -1; /* Move the background behind other elements in the page */
+  color: white
+}
 
 /* .App-logo {
   height: 40vmin;
