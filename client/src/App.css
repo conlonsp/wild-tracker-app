@@ -12,6 +12,40 @@
   color: white
 }
 
+.foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+}
+
+.head {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  z-index: 1
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Additional settings */
+  position: absolute;
+  top: 50%; /* Move the container down by 50% of the viewport height */
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%); /* Center the container vertically */
+}
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 function Header() {
   
   return (
-    <div>
+    <div className="head">
       <h1>Wild Tracker</h1>
       <span>
         <NavBar />

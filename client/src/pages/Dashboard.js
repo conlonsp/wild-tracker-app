@@ -6,7 +6,7 @@ function Dashboard({ donations }) {
   const { user } = useContext(UserContext)
 
   return (
-    <div>
+    <div className='container'>
       {user ?
         <div>
           <h1>Dashboard</h1>
