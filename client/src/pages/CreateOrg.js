@@ -48,7 +48,7 @@ function CreateOrg({ organizations, setOrganizations }) {
   }
 
   return (
-    <div>
+    <div className='container'>
       <h1>Create an Organization here!</h1>
       <form onSubmit={handleSubmit}>
         <input

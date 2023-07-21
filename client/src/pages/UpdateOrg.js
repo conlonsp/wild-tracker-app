@@ -47,7 +47,7 @@ function UpdateOrg({ organization, onUpdate }) {
   }
   
   return (
-    <div>
+    <div className='container'>
       {!isSuccessful ?
         <div>
           <h1>Update an Organization!</h1>

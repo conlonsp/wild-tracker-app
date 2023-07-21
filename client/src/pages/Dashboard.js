@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../Context'
-import Chart from './Chart'
+import Chart from '../components/Chart'
 
 function Dashboard({ donations }) {
   const { user } = useContext(UserContext)

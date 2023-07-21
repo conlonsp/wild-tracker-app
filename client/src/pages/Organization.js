@@ -44,7 +44,7 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
   }
   
   return (
-    <div>
+    <div className='container'>
       {user ?
         <div>
           <h1>{organization.name}</h1>

@@ -14,7 +14,7 @@ function Project({ orgId }) {
   }, [])
 
   return (
-    <div>
+    <div className='container'>
       <h1>{project.name}</h1>
       <h2>{project.location}</h2>
       <h4>{project.description}</h4>

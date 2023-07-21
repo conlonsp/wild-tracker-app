@@ -16,7 +16,7 @@ function Organizations({ organizations, setOrganizations }) {
   console.log(organizations)
 
   return (
-    <div>
+    <div className='container'>
       <h1>Organization List</h1>
       <ul>
         {organizations.map(org => {

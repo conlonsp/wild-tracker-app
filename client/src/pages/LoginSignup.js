@@ -6,7 +6,7 @@ function LoginSignup() {
   const [toLogin, setToLogin] = useState(false)
 
   return (
-    <div>
+    <div className='container'>
       {toLogin ?
         <SignupForm setToLogin={setToLogin} />
       :
