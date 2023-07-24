@@ -85,6 +85,7 @@ function LoginForm({ setToLogin }) {
               <div class="footer-link padding-top--24">
                 <span>
                   Don't have an account?
+                  &nbsp;
                   <p
                     onClick={() => setToLogin(true)}
                     style={{color: "rgb(84, 105, 212)", cursor: "pointer"}}
