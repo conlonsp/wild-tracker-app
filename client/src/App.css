@@ -260,13 +260,26 @@ p.error {
   line-height: 5px;
 }
 
-#need-auth {
+.text-blurb {
   background-image: linear-gradient(to right,  #04AA6D, hsl(162, 93%, 27%));
   font-size: 36px;
   padding: 15px;
   border-radius: 20px;
   box-shadow: 5px 6px 8px hsl(162, 93%, 17%);
+  opacity: 0.95;
 }
+
+.text-blurb--white {
+  background-color: whitesmoke;
+  padding: 15px;
+  font-size: 20px;
+  color: rgb(68, 63, 63);
+  opacity: 0.95;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* style={{fontSize: "25px", marginLeft: '10px', marginRight: '60px'}} */
 
 /* .error {
   color: red;
