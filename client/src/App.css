@@ -34,20 +34,6 @@
   z-index: 1
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  /* Additional settings */
-  position: absolute;
-  top: 50%; /* Move the container down by 50% of the viewport height */
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%); /* Center the container vertically */
-}
-
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -91,6 +77,145 @@
 .logout-button:hover:not(.active) {
   background-color: #dcdcdc;
 }
+
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Additional settings */
+  position: absolute;
+  top: 50%; /* Move the container down by 50% of the viewport height */
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%); /* Center the container vertically */
+}
+
+.formbg-outer {
+  width: 100%;
+  max-width: 448px;
+}
+
+.formbg {
+  background: white;
+  border-radius: 4px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+
+.formbg-inner {
+  padding: 48px;
+} 
+
+.box-root {
+  box-sizing: border-box;
+}
+
+.flex-direction--column {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-flex {
+  display: flex;
+}
+
+/* .formbg {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 448px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+} */
+
+.padding-horizontal--48 {
+  padding: 48px;
+}
+
+.padding-bottom--15 {
+  padding-bottom: 15px;
+}
+
+.padding-bottom--24 {
+  padding-bottom: 24px;
+}
+
+.padding-top--24 {
+  padding-top: 24px;
+}
+
+.padding-top--15 {
+  padding-top: 15px;
+}
+
+span {
+  display: block;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1a1f36;
+}
+
+label {
+  margin-bottom: 10px;
+  color: black
+}
+
+.field input {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 4px 16px;
+  width: 75%;
+  min-height: 44px;
+  border: unset;
+  border-radius: 4px;
+  outline-color: rgb(84 105 212 / 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+
+input[type="submit"] {
+  /* background-color: rgb(84, 105, 212); */
+  background-color: #04AA6D;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+              #04AA6D 0px 0px 0px 1px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.grid--50-50 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+/* .align-center {
+  align-items: center; 
+}
+.center-center {
+  align-items: center;
+  justify-content: center;
+} */
 
 /* .navbar-container {
   display: flex;
