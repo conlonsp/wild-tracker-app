@@ -18,8 +18,8 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: whitesmoke;
-  color: black;
+  background-color: hsl(162, 93%, 27%);
+  color: whitesmoke;
   text-align: center;
 }
 
@@ -62,7 +62,7 @@
 
 .nav-item.active {
   background-color: #04AA6D;
-  color: white
+  color: whitesmoke
 }
 
 .logout-button {
@@ -98,7 +98,7 @@
 }
 
 .formbg {
-  background: white;
+  background: whitesmoke;
   border-radius: 4px;
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }

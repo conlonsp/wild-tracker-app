@@ -4,7 +4,7 @@ function Footer() {
 
   return (
     <div className="foot">
-      <h1>This is the Footer</h1>
+      <h1>Wild Tracker</h1>
     </div>
   )
 }
