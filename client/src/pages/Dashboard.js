@@ -26,8 +26,7 @@ function Dashboard({ donations }) {
         </div>
       :
         <div>
-          <h1>Dashboard</h1>
-          <p>Please log in to access app features!</p>
+          <p id='need-auth'>Please log in to access Dashboard features!</p>
         </div>
       }
       

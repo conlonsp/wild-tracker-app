@@ -5,8 +5,6 @@ import SignupForm from '../components/SignupForm'
 function LoginSignup() {
   const [toLogin, setToLogin] = useState(false)
 
-  console.log(toLogin)
-
   return (
     <div className='container'>
       {toLogin ?
