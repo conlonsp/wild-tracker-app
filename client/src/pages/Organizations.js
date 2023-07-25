@@ -8,11 +8,19 @@ function Organizations({ organizations, setOrganizations }) {
 
   const navigate = useNavigate()
 
-  // const renderOrgs = organizations.map(org => (
-  //   <li key={org.id}>
-  //     <Link to={`/organizations/${org.id}`}>{org.name}</Link>
-  //   </li>
-  // ))
+  const [count, setCount] = useState(0)
+
+  function increment() {
+    if(count < 10) {
+      setCount(() => count + 1)
+    }
+  }
+
+  function decrement() {
+    if(count > 0) {
+      setCount(() => count - 1)
+    }
+  }
   console.log(organizations)
 
   return (
@@ -32,7 +40,11 @@ function Organizations({ organizations, setOrganizations }) {
       :
         null
       }
-
+      <span>
+        <button onClick={decrement}>Back</button>
+        <h1>{count}</h1>
+        <button onClick={increment}>Next</button>
+      </span>
     </div>
   )
 }

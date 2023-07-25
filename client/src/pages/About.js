@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 function About() {
 
+
+
   return (
-    <div className='container'>
+    <div className='container' style={{display: '100%'}}>
       <div class='text-blurb' style={{width: '95%'}}>
         <h1 style={{fontSize: "60px"}}>Welcome!</h1>
         <h3 style={{fontSize: "15px"}}>We're happy you're here.</h3>
@@ -14,4 +16,6 @@ function About() {
 }
 
 export default About
+
+// style={{backgroundImage: "-webkit-linear-gradient(65deg, #1a75ff 50%, #b3d1ff 50%)", backgroundSize: "100% 100%"}}
 

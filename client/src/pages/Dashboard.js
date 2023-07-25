@@ -11,7 +11,7 @@ function Dashboard({ donations }) {
         <div>
           <h1>Dashboard</h1>
           <p>Welcome, {user.username}!</p>
-          <ul>
+          {/* <ul>
             {donations ?
               donations.map(d => {
                 return (
@@ -21,8 +21,14 @@ function Dashboard({ donations }) {
             : 
              <p>Start donating to view progress!</p>
             }
-          </ul>
-          <Chart donations={donations} />
+          </ul> */}
+          {donations ?
+            <div class='text-blurb--white' style={{opacity: '1', backgroundColor: 'grey', color: 'whitesmoke'}}>
+              <Chart donations={donations} />
+            </div>
+          :
+           <p>Start donating to view progress!</p>
+          }
         </div>
       :
         <div>
