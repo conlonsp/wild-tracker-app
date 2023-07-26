@@ -303,6 +303,7 @@ p.error {
   .pagination a:hover:not(.active) {background-color: #ddd;}
 
   .form-button {
+    display: inline-block;
     color: whitesmoke;
     cursor: pointer;
     font-size: 20px;
@@ -312,6 +313,16 @@ p.error {
     background-color: #4CAF50;
     padding: 0 10px;
     border-radius: 20px;
+  }
+
+  .button-container {
+    /* Optional: Add margin or padding between the buttons for spacing */
+    margin-right: 10px;
+  }
+
+  .form-button:not(:last-child) {
+    /* Add margin between the buttons to separate them */
+    margin-right: 10px;
   }
 
 /* style={{fontSize: "25px", marginLeft: '10px', marginRight: '60px'}} */

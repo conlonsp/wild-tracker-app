@@ -22,7 +22,7 @@ function Project({ orgId }) {
           <h6>Start date: {project.start_date}</h6>
           <h6>End date: {project.end_date}</h6>
         </div>
-        <p class='form-button' onClick={() => navigate(`/organizations/${orgId}`)}>Back</p>
+        <p class='form-button' onClick={() => navigate(`/organizations/${orgId}`)}>back</p>
     </div>
   )
 }

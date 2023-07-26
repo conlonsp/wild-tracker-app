@@ -44,23 +44,27 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
   }
   
   return (
-    <div className='container'>
+    <div>
       {user ?
-        <div>
-          <h1>{organization.name}</h1>
-          <h3>{organization.mission}</h3>
-          <h3>{organization.location}</h3>
-          <h4>Projects</h4>
-          {orgProjects.map(proj => {
-            return (
-              <li key={proj.id}>
-                <Link to={`/projects/${proj.id}`}>{proj.name}</Link>
-              </li>
-            )
-          })}
-          <button onClick={() => navigate(`/organizations/${params.id}/update`)}>Update</button>
-          <button onClick={deleteOrg}>Delete</button>
-          <button onClick={() => navigate('/projects/create')}>New Project</button>
+        <div class='container'>
+          <div class='hello'>
+            <h1>{organization.name}</h1>
+            <h3>{organization.mission}</h3>
+            <h3>{organization.location}</h3>
+            <h4>Projects</h4>
+            {orgProjects.map(proj => {
+              return (
+                <li key={proj.id}>
+                  <Link to={`/projects/${proj.id}`}>{proj.name}</Link>
+                </li>
+              )
+            })}
+            <span class='form-container'>
+              <p class='form-button' onClick={() => navigate(`/organizations/${params.id}/update`)}>update</p>
+              <p class='form-button' onClick={deleteOrg}>delete</p>
+              <p class='form-button' onClick={() => navigate('/projects/create')}>new</p>
+            </span>
+          </div>
           <DonationForm
             orgId={organization.id}
             donations={donations}
