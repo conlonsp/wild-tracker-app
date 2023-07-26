@@ -27,6 +27,8 @@ function App() {
   const [orgId, setOrgId] = useState(null)
   const [orgProjects, setOrgProjects] = useState([])
   const [donations, setDonations] = useState([])
+  const [page, setPage] = useState(1)
+  const [pages, setPages] = useState(0)
 
   console.log(donations)
 
@@ -47,10 +49,14 @@ function App() {
   }, [user])
 
   useEffect(() => {
-    fetch('/organizations')
+    fetch(`/organizations?page=${page}`)
     .then(r => {
       if(r.ok) {
-        r.json().then(orgs => setOrganizations(orgs))
+        r.json().then(orgs => {
+          setOrganizations(orgs.organizations)
+          setPage(orgs.page)
+          setPages(orgs.pages)
+        })
       } else {
         r.json().then(err => setErrors(err.errors))
       }
@@ -94,6 +100,9 @@ function App() {
             <Organizations
               organizations={organizations}
               setOrganizations={setOrganizations}
+              page={page}
+              setPage={setPage}
+              pages={pages}
             />
           }/>
           <Route path=':id' element={

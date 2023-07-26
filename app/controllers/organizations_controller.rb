@@ -6,7 +6,12 @@ class OrganizationsController < ApplicationController
   skip_before_action :authorize, only: [:index]
 
   def index
-    render json: Organization.all, status: :ok
+    @organizations = Organization.paginate(:page => params[:page], :per_page => 5)
+    render json: {
+      organizations: @organizations,
+      page: @organizations.current_page,
+      pages: @organizations.total_pages
+    }, status: :ok
   end
 
   def show

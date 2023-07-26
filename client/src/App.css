@@ -279,6 +279,29 @@ p.error {
   margin-right: 100px;
 }
 
+
+  .pagination {
+    display: inline-block;
+    cursor: pointer;
+    font-size: smaller
+  }
+  
+  .pagination a {
+    color: whitesmoke;
+    float: left;
+    padding: 0px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    margin: 15px 4px;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
 /* style={{fontSize: "25px", marginLeft: '10px', marginRight: '60px'}} */
 
 /* .error {

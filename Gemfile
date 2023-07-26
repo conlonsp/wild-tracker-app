@@ -52,4 +52,4 @@ gem "active_model_serializers", "~> 0.10.12"
 
 gem 'bundler', '~> 2.2'
 
-gem 'will_paginate', '~> 4.0'
+gem 'will_paginate'

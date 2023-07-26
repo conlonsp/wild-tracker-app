@@ -6,5 +6,5 @@ class Organization < ApplicationRecord
   validates :name, :mission, presence: true
   validates :mission, length: { in: 50..250 }
 
-  self.per_page = 8
+  # self.per_page = 8
 end

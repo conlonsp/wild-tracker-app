@@ -1,30 +1,25 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../Context";
+import { Pagination } from "semantic-ui-react"
 
-function Organizations({ organizations, setOrganizations }) {
+function Organizations({ organizations, setOrganizations, page, setPage, pages }) {
 
   const { user } = useContext(UserContext)
 
   const navigate = useNavigate()
-
-  const [count, setCount] = useState(0)
-
-  function increment() {
-    if(count < 10) {
-      setCount(() => count + 1)
-    }
+  
+  function handlePage(e, {activePage}) {
+    fetch(`/organizations?page=${activePage}`)
+    .then(r => r.json())
+    .then(orgs => {
+      setOrganizations(orgs.organizations)
+      setPage(orgs.page)
+    })
   }
-
-  function decrement() {
-    if(count > 0) {
-      setCount(() => count - 1)
-    }
-  }
-  console.log(organizations)
 
   return (
-    <div className='container'>
+    <div className='container text-blurb' >
       <h1>Organization List</h1>
       <ul>
         {organizations.map(org => {
@@ -35,16 +30,19 @@ function Organizations({ organizations, setOrganizations }) {
           )
         })}
       </ul>
+      <Pagination
+        siblingRange='5'
+        boundaryRange='1'
+        defaultActivePage={page}
+        totalPages={pages}
+        onPageChange={handlePage}
+        // style={{backgroundColor: 'black', fontSize: '12px', cursor: 'pointer'}}
+      />
       {user ?
         <button onClick={() => navigate('/organizations/new')}>Create</button>
       :
         null
       }
-      <span>
-        <button onClick={decrement}>Back</button>
-        <h1>{count}</h1>
-        <button onClick={increment}>Next</button>
-      </span>
     </div>
   )
 }
