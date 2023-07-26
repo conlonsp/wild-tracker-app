@@ -14,13 +14,15 @@ function Project({ orgId }) {
   }, [])
 
   return (
-    <div className='container'>
-      <h1>{project.name}</h1>
-      <h2>{project.location}</h2>
-      <h4>{project.description}</h4>
-      <h5>Start date: {project.start_date}</h5>
-      <h5>End date: {project.end_date}</h5>
-      <button onClick={() => navigate(`/organizations/${orgId}`)}>Back</button>
+    <div class='container text-blurb'>
+        <h3>{project.name}</h3>
+        <h6>{project.location}</h6>
+        <div class='text-blurb--white'>
+          <h5>{project.description}</h5>
+          <h6>Start date: {project.start_date}</h6>
+          <h6>End date: {project.end_date}</h6>
+        </div>
+        <p class='form-button' onClick={() => navigate(`/organizations/${orgId}`)}>Back</p>
     </div>
   )
 }
