@@ -48,38 +48,56 @@ function CreateOrg({ organizations, setOrganizations }) {
   }
 
   return (
-    <div className='container'>
-      <h1>Create an Organization here!</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type='text'
-          name='name'
-          placeholder="Organization Name"
-          value={newOrg.name}
-          onChange={handleChange}
-        />
-        <input
-          type='text'
-          name='location'
-          placeholder="Based out of..."
-          value={newOrg.location}
-          onChange={handleChange}
-        />
-        <textarea
-          type='text'
-          name='mission'
-          placeholder='Our mission is...'
-          value={newOrg.mission}
-          onChange={handleChange}
-        />
-        <button type='submit'>Submit</button>
-      </form>
-      {errors.map(err => {
-        return (
-          <p key={err} style={{color: 'red'}}>{err}</p>
-        )
-      })}
-      <button onClick={() => navigate('/organizations')}>Close</button>
+    <div class="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
+      <div class="formbg-outer">
+        <div class="formbg">
+          <div class="formbg-inner padding-horizontal--48">
+            <span class="padding-bottom--15">Create an Organization</span>
+            <form onSubmit={handleSubmit}>
+              <div class="field">
+                <label>Organization Name</label>
+                <input
+                  type='text'
+                  name='name'
+                  value={newOrg.name}
+                  onChange={handleChange}
+                />
+              </div>
+              <div class="field">
+                <div class="padding-top--10">
+                  <label>Location</label>
+                </div>
+                <input
+                  type='text'
+                  name='location'
+                  value={newOrg.location}
+                  onChange={handleChange}
+                />
+              </div>
+              <div class="field">
+                <div class="padding-top--10">
+                  <label>Mission</label>
+                </div>
+                <textarea
+                  type='text'
+                  name='mission'
+                  value={newOrg.mission}
+                  onChange={handleChange}
+                />
+              </div>
+              <div class="field padding-bottom--24 padding-top--24 grid--25-75">
+                <input type='button' name='back' value="<"  onClick={() => navigate('/organizations')}/>
+                <input type="submit" name="submit" value="Continue"/>
+              </div>
+              {errors.map(err => {
+                return (
+                  <p key={err} class='error'>{err}</p>
+                )
+              })}
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

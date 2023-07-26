@@ -88,7 +88,7 @@ function LoginForm({ setToLogin }) {
                   &nbsp;
                   <p
                     onClick={() => setToLogin(true)}
-                    // style={{color: "rgb(84, 105, 212)", cursor: "pointer"}}
+                    style={{color: "rgb(84, 105, 212)", cursor: "pointer"}}
                   >
                     Sign up
                   </p>
