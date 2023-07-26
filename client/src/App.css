@@ -297,10 +297,22 @@ p.error {
   
   .pagination a.active {
     background-color: #4CAF50;
-    color: white;
+    color: whitesmoke;
   }
   
   .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  .form-button {
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .form-button:hover {
+    background-color: #4CAF50;
+    padding: 0 10px;
+    border-radius: 20px;
+  }
 
 /* style={{fontSize: "25px", marginLeft: '10px', marginRight: '60px'}} */
 

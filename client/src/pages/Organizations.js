@@ -36,10 +36,9 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
         defaultActivePage={page}
         totalPages={pages}
         onPageChange={handlePage}
-        // style={{backgroundColor: 'black', fontSize: '12px', cursor: 'pointer'}}
       />
       {user ?
-        <button onClick={() => navigate('/organizations/new')}>Create</button>
+        <p class='form-button' onClick={() => navigate('/organizations/new')}>create</p>
       :
         null
       }
