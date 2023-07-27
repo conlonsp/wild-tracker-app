@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import leaves2 from '../images/leaves2.jpg'
 
 function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
   
@@ -58,7 +59,7 @@ function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
   }
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <div class='images' style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center", backgroundImage: `url(${leaves2})` }}>
     {!isNext ?
          <div class="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
          <div class="formbg-outer">

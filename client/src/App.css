@@ -307,13 +307,14 @@ p.error {
 
   .form-button {
     display: inline-block;
-    color: whitesmoke;
+    color: gray;
     cursor: pointer;
     font-size: 20px;
   }
 
   .form-button:hover {
     background-color: #4CAF50;
+    color: whitesmoke;
     padding: 0 10px;
     border-radius: 20px;
   }
@@ -325,7 +326,7 @@ p.error {
 
   .form-button:not(:last-child) {
     /* Add margin between the buttons to separate them */
-    margin-right: px;
+    margin-right: 8px;
   }
 
 /* style={{fontSize: "25px", marginLeft: '10px', marginRight: '60px'}} */

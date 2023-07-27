@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import vine from '../images/vine.jpg'
 
 function UpdateOrg({ organization, onUpdate }) {
 
@@ -47,7 +48,7 @@ function UpdateOrg({ organization, onUpdate }) {
   }
   
   return (
-    <div class="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
+    <div class="box-root flex-flex flex-direction--column container images" style={{minHeight: '100vh', flexGrow: '1', backgroundImage: `url(${vine})`}}>
       {!isSuccessful ?
       <div class="formbg-outer">
         <div class="formbg">
