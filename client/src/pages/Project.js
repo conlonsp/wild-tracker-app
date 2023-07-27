@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import leaves2 from '../images/leaves2.jpg'
 
 function Project({ orgId }) {
   const [project, setProject] = useState({})
@@ -14,7 +15,7 @@ function Project({ orgId }) {
   }, [])
 
   return (
-    <div class='container text-blurb'>
+    <div class='container images' style={{backgroundImage: `url(${leaves2})`, color: "black"}}>
         <h3>{project.name}</h3>
         <h6>{project.location}</h6>
         <div class='text-blurb--white'>

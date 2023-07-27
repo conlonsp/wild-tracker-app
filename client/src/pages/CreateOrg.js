@@ -85,8 +85,7 @@ function CreateOrg({ organizations, setOrganizations }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field padding-bottom--24 padding-top--24 grid--25-75">
-                <input type='button' name='back' value="<"  onClick={() => navigate('/organizations')}/>
+              <div class="field padding-bottom--24 padding-top--24">
                 <input type="submit" name="submit" value="Continue"/>
               </div>
               {errors.map(err => {
@@ -94,6 +93,7 @@ function CreateOrg({ organizations, setOrganizations }) {
                   <p key={err} class='error'>{err}</p>
                 )
               })}
+              <p style={{color: "rgb(84, 105, 212)", cursor: "pointer"}} onClick={() => navigate('/organizations')}>{`Back to organizations`}</p>
             </form>
           </div>
         </div>

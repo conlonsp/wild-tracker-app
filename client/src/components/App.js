@@ -16,8 +16,6 @@ import CreateOrg from "../pages/CreateOrg";
 import UpdateOrg from "../pages/UpdateOrg";
 import CreateProj from "../pages/CreateProj"
 
-import background from '../images/leaves.jpg'
-
 function App() {
   const { user, setUser } = useContext(UserContext)
 
@@ -83,7 +81,7 @@ function App() {
   }
 
   return (
-    <div className="App" style={{backgroundImage: `url(${background})`}}>
+    <div className="App">
       <Header />
       <Routes>
         <Route path='/' element={
@@ -138,10 +136,11 @@ function App() {
             orgId={orgId}
             orgProjects={orgProjects}
             setOrgProjects={setOrgProjects}
+            organizations={organizations}
           />
         }/>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -4,6 +4,8 @@ import { UserContext } from '../Context'
 
 import DonationForm from '../components/DonationForm'
 
+import vine from '../images/vine.jpg'
+
 function Organization({ organization, setOrganization, onDelete, grabId, orgProjects, setOrgProjects, donations, setDonations}) {
 
   const { user } = useContext(UserContext)
@@ -46,7 +48,7 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
   return (
     <div>
       {user ?
-        <div class='container'>
+        <div class='container images' style={{backgroundImage: `url(${vine})`, color: "black"}}>
           <div class='hello'>
             <h1>{organization.name}</h1>
             <h3>{organization.mission}</h3>

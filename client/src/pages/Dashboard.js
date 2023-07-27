@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../Context'
 import Chart from '../components/Chart'
+import leaves from '../images/leaves.jpg'
 
 function Dashboard({ donations }) {
   const { user } = useContext(UserContext)
 
   return (
-    <div className='container'>
+    <div className="container images" style={{backgroundImage: `url(${leaves})`}}>
       {user ?
         <div>
           <h1>Dashboard</h1>
@@ -23,7 +24,7 @@ function Dashboard({ donations }) {
             }
           </ul> */}
           {donations ?
-            <div class='text-blurb--white' style={{opacity: '1', backgroundColor: 'grey', color: 'whitesmoke'}}>
+            <div class='text-blurb--white' style={{opacity: '1', backgroundColor: 'grey', color: 'white'}}>
               <Chart donations={donations} />
             </div>
           :

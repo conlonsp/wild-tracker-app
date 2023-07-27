@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function CreateProj({ orgId, orgProjects, setOrgProjects }) {
+function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
   
   const [newProj, setNewProj] = useState({
     name: '',
@@ -12,9 +12,10 @@ function CreateProj({ orgId, orgProjects, setOrgProjects }) {
   })
   const [errors, setErrors] = useState([])
   const [isNext, setIsNext] = useState(false)
-  const [submitted, setSubmitted] = useState(true)
 
   const navigate = useNavigate()
+
+  const organizationName = organizations.filter(org => org.id === orgId)[0].name
 
   function handleChange(e) {
     setNewProj({
@@ -107,6 +108,7 @@ function CreateProj({ orgId, orgProjects, setOrgProjects }) {
                    )
                  })}
                </form>
+               <p style={{color: "rgb(84, 105, 212)", cursor: "pointer"}} onClick={() => navigate(`/organizations/${orgId}`)}>{`Back to ${organizationName}`}</p>
              </div>
            </div>
          </div>
@@ -150,10 +152,11 @@ function CreateProj({ orgId, orgProjects, setOrgProjects }) {
                 )
               })}
             </form>
+            <p style={{color: "rgb(84, 105, 212)", cursor: "pointer"}} onClick={() => navigate(`/organizations/${orgId}`)}>{`Back to ${organizationName}`}</p>
           </div>
         </div>
       </div>
-      {submitted ? <p class='form-button'>{`Back to organization`}</p> : null}
+      
     </div>
     
     }
