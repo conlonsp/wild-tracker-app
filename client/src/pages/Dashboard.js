@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../Context'
 import Chart from '../components/Chart'
-import leaves from '../images/leaves.jpg'
+import fernSpine from '../images/fern-spine.jpg'
 
 function Dashboard({ donations }) {
   const { user } = useContext(UserContext)
 
   return (
-    <div className="container images" style={{backgroundImage: `url(${leaves})`}}>
+    <div className="container images" style={{backgroundImage: `url(${fernSpine})`}}>
       {user ?
         <div>
           <h1>Dashboard</h1>
@@ -33,7 +33,7 @@ function Dashboard({ donations }) {
         </div>
       :
         <div>
-          <p class='text-blurb'><em>Log in or Sign up to access Dashboard features!</em></p>
+          <p class='text-blurb--white'><em>Log in or Sign up to access Dashboard features!</em></p>
         </div>
       }
       

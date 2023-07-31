@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     resources :projects, only: [:index, :create]
   end
 
-  resources :donations, only: [:index, :create]
-  # resources :user_organizations, only: [:index]
+  resources :donations, only: [:index, :create, :destroy]
+  resources :user_organizations, only: [:index, :show, :destroy]
   resources :projects, only: [:index, :show, :create]
   
   # Routing logic: fallback requests for React Router.

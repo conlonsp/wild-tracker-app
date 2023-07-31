@@ -28,8 +28,6 @@ function App() {
   const [page, setPage] = useState(1)
   const [pages, setPages] = useState(0)
 
-  console.log(donations)
-
   useEffect(() => {
     fetch('/me').then(r => {
       if(r.ok) {
@@ -44,7 +42,7 @@ function App() {
     fetch('/donations')
     .then(r => r.json())
     .then(donations => setDonations(donations))
-  }, [user])
+  }, [user, organizations])
 
   useEffect(() => {
     fetch(`/organizations?page=${page}`)
@@ -74,6 +72,7 @@ function App() {
 
   function handleDelete(id) {
     setOrganizations(prevOrgs => prevOrgs.filter(org => org.id !== id))
+    setOrgId(id)
   }
 
   function grabId(id) {

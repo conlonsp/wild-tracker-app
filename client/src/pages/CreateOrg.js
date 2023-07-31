@@ -19,8 +19,6 @@ function CreateOrg({ organizations, setOrganizations }) {
     })
   }
 
-  console.log(organizations)
-
   function handleSubmit(e) {
     e.preventDefault()
     fetch('/organizations', {

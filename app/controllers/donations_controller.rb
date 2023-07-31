@@ -19,6 +19,12 @@ class DonationsController < ApplicationController
     end
   end
 
+  def destroy
+    donation = Donation.find(params[:id])
+    donation.destroy
+    head :no_content
+  end
+
   private
 
   def donation_params
