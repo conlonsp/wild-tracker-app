@@ -20,31 +20,33 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
   }
 
   return (
-    <div className='container images' style={{backgroundImage: `url(${plantVase})`, color: 'black'}}>
-      <h1>Organization List</h1>
-      <ul>
-        {organizations.map(org => {
-          return (
-            <li key={org.id}>
-              <Link to={`/organizations/${org.id}`}>{org.name}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      <div style={{backgroundColor: 'gray'}}>
-        <Pagination
-          siblingRange='5'
-          boundaryRange='1'
-          defaultActivePage={page}
-          totalPages={pages}
-          onPageChange={handlePage}
-        />
+    <div className='images' style={{backgroundImage: `url(${plantVase})`, color: 'black'}}>
+      <h1 style={{marginTop: "155px", fontSize: '60px'}}><em>Organization List</em></h1>
+      <div class='container--right'>
+        <div>
+          {organizations.map(org => {
+            return (
+              <p key={org.id} style={{fontSize: '30px'}}>
+                <Link to={`/organizations/${org.id}`}>{org.name}</Link>
+              </p>
+            )
+          })}
+        </div>
+        <div style={{backgroundColor: 'gray'}}>
+          <Pagination
+            siblingRange='5'
+            boundaryRange='1'
+            defaultActivePage={page}
+            totalPages={pages}
+            onPageChange={handlePage}
+          />
+        </div>
+        {user ?
+          <p class='form-button' onClick={() => navigate('/organizations/new')}>create</p>
+        :
+          null
+        }
       </div>
-      {user ?
-        <p class='form-button' onClick={() => navigate('/organizations/new')}>create</p>
-      :
-        null
-      }
     </div>
   )
 }
