@@ -47,32 +47,36 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
   }
   
   return (
-    <div>
+    <div class="images" style={{backgroundImage: `url(${vine})`, color: "black"}}>
       {user ?
-        <div class='container images' style={{backgroundImage: `url(${vine})`, color: "black"}}>
-          <div class='hello'>
-            <h1>{organization.name}</h1>
-            <h3>{organization.mission}</h3>
-            <h3>{organization.location}</h3>
-            <h4>Projects</h4>
-            {orgProjects.map(proj => {
-              return (
-                <li key={proj.id}>
-                  <Link to={`/projects/${proj.id}`}>{proj.name}</Link>
-                </li>
-              )
-            })}
-            <span class='form-container'>
-              <p class='form-button' onClick={() => navigate(`/organizations/${params.id}/update`)}>update</p>
-              <p class='form-button' onClick={deleteOrg}>delete</p>
-              <p class='form-button' onClick={() => navigate('/projects/create')}>new</p>
-            </span>
+        <div>
+          <div class='container--left' >
+            <div>
+              <h1>{organization.name}</h1>
+              <h3>{organization.mission}</h3>
+              <h3>{organization.location}</h3>
+              <h4>Projects</h4>
+              {orgProjects.map(proj => {
+                return (
+                  <p key={proj.id} style={{fontSize: '30px'}}>
+                    <Link to={`/projects/${proj.id}`}>{proj.name}</Link>
+                  </p>
+                )
+              })}
+              <span class='form-container'>
+                <p class='form-button' onClick={() => navigate(`/organizations/${params.id}/update`)}>update</p>
+                <p class='form-button' onClick={deleteOrg}>delete</p>
+                <p class='form-button' onClick={() => navigate('/projects/create')}>new</p>
+              </span>
+            </div>
           </div>
-          <DonationForm
-            orgId={organization.id}
-            donations={donations}
-            setDonations={setDonations}
-          />
+          <div class='container--right' style={{top: '49%', marginLeft: '60.5%'}}>
+            <DonationForm
+              orgId={organization.id}
+              donations={donations}
+              setDonations={setDonations}
+            />
+          </div>
         </div>
       :
         <p>{errors}</p>

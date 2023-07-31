@@ -110,6 +110,20 @@
   transform: translateY(-50%); /* Center the container vertically */
 }
 
+.container--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Additional settings */
+  position: absolute;
+  top: 50%; /* Move the container down by 50% of the viewport height */
+  margin-left: 10%;
+  width: 40%;
+  transform: translateY(-50%); /* Center the container vertically */
+}
+
 .container {
   display: flex;
   flex-direction: column;
