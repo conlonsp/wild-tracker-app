@@ -325,9 +325,18 @@ p.error {
   margin-right: 100px;
 }
 
+.page-block {
+  background-color:#04AA6D;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
 
   .pagination {
+    padding: 0px 16px;
     display: inline-block;
+    align-items: center;
     cursor: pointer;
     font-size: smaller
   }
@@ -342,11 +351,11 @@ p.error {
   }
   
   .pagination a.active {
-    background-color: #4CAF50;
+    background-color:hsl(162, 93%, 27%);
     color: whitesmoke;
   }
   
-  .pagination a:hover:not(.active) {background-color: #ddd;}
+  .pagination a:hover:not(.active) {background-color:hsl(162, 48%, 37%);}
 
   .form-button {
     display: inline-block;

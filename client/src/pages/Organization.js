@@ -16,13 +16,14 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
   const [errors, setErrors] = useState([])
 
   useEffect(() => {
-    fetch(`/organizations/${params.id}`)
+    fetch(`/organizations/${params.id}/projects`)
     .then(r => {
       if(r.ok) {
-        r.json().then(org => {
-          setOrganization(org)
-          setOrgProjects(org.projects)
-          grabId(org.id)
+        r.json().then(projs => {
+          console.log(projs[2])
+          setOrganization(projs[0].organization)
+          setOrgProjects(projs)
+          grabId(projs[0].organization_id)
         })
       } else {
         r.json().then(err => setErrors(err.errors))
@@ -68,6 +69,7 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
                 <p class='form-button' onClick={deleteOrg}>delete</p>
                 <p class='form-button' onClick={() => navigate('/projects/create')}>new</p>
               </span>
+              <p class='form-button' onClick={() => navigate('/organizations')}>back</p>
             </div>
           </div>
           <div class='container--right' style={{top: '49%', marginLeft: '60.5%'}}>

@@ -21,7 +21,7 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
 
   return (
     <div className='images' style={{backgroundImage: `url(${plantVase})`, color: 'black'}}>
-      <h1 style={{marginTop: "155px", fontSize: '60px'}}><em>Organization List</em></h1>
+      <h1 style={{marginTop: "155px", fontSize: '60px'}}><em>Our Partners...</em></h1>
       <div class='container--right'>
         <div>
           {organizations.map(org => {
@@ -32,7 +32,7 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
             )
           })}
         </div>
-        <div style={{backgroundColor: 'gray'}}>
+        <div class='page-block'>
           <Pagination
             siblingRange='5'
             boundaryRange='1'
