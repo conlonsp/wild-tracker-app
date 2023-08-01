@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { UserContext } from '../Context'
-
 import DonationForm from '../components/DonationForm'
-
 import vine from '../images/vine.jpg'
+import { Pagination } from "semantic-ui-react"
 
 function Organization({ organization, setOrganization, onDelete, grabId, orgProjects, setOrgProjects, donations, setDonations}) {
 
@@ -14,22 +13,35 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
   const params = useParams()
 
   const [errors, setErrors] = useState([])
+  const [projPage, setProjPage] = useState(1)
+  const [projPages, setProjPages] = useState(0)
 
   useEffect(() => {
-    fetch(`/organizations/${params.id}/projects`)
+    fetch(`/organizations/${params.id}/projects?page=${projPage}`)
     .then(r => {
       if(r.ok) {
-        r.json().then(projs => {
-          console.log(projs[2])
-          setOrganization(projs[0].organization)
-          setOrgProjects(projs)
-          grabId(projs[0].organization_id)
+        r.json().then(data => {
+          setOrganization(data.projects[0].organization)
+          setOrgProjects(data.projects)
+          grabId(data.projects[0].organization_id)
+          setProjPage(data.page)
+          setProjPages(data.pages)
         })
       } else {
         r.json().then(err => setErrors(err.errors))
       }
     })
   }, [])
+
+  function handlePage(e, {activePage}) {
+    fetch(`/organizations/${params.id}/projects?page=${activePage}`)
+    .then(r => r.json())
+    .then(data => {
+      console.log(data)
+      setOrgProjects(data.projects)
+      setProjPage(data.page)
+    })
+  }
 
   function deleteOrg() {
     fetch(`/organizations/${organization.id}`, {
@@ -69,6 +81,15 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
                 <p class='form-button' onClick={deleteOrg}>delete</p>
                 <p class='form-button' onClick={() => navigate('/projects/create')}>new</p>
               </span>
+              <div class='page-block'>
+                <Pagination
+                  siblingRange='5'
+                  boundaryRange='1'
+                  defaultActivePage={projPage}
+                  totalPages={projPages}
+                  onPageChange={handlePage}
+                />
+              </div>
               <p class='form-button' onClick={() => navigate('/organizations')}>back</p>
             </div>
           </div>

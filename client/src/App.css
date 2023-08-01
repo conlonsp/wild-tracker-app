@@ -118,7 +118,7 @@
 
   /* Additional settings */
   position: absolute;
-  top: 50%; /* Move the container down by 50% of the viewport height */
+  top: 55%; /* Move the container down by 50% of the viewport height */
   margin-left: 10%;
   width: 40%;
   transform: translateY(-50%); /* Center the container vertically */

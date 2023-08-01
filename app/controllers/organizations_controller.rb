@@ -11,7 +11,7 @@ class OrganizationsController < ApplicationController
       organizations: @organizations,
       page: @organizations.current_page,
       pages: @organizations.total_pages
-    }, status: :ok
+    }, instatus: :ok
   end
 
   def show

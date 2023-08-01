@@ -5,15 +5,15 @@ class ProjectsController < ApplicationController
   def index
     if params[:organization_id]
       org = Organization.find(params[:organization_id])
-      @projects = org.projects.paginate(:page => params[:page], :per_page => 5)
+      @projects = org.projects.paginate(:page => params[:page], :per_page => 3)
     else
-      @projects = Project.paginate(:page => params[:page], :per_page => 5)
+      @projects = Project.paginate(:page => params[:page], :per_page => 3)
     end
     render json: {
       projects: @projects,
       page: @projects.current_page,
       pages: @projects.total_pages
-    }, status: :ok
+    }, include: ['organization'], status: :ok
   end
 
   def show
