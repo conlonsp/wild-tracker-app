@@ -33,7 +33,7 @@ function NavBar() {
           Organizations
         </NavLink>
       </span>
-      <button className="logout-button" onClick={handleLogout}>
+      <button className="logout-button" style={{fontFamily: 'staatliches'}} onClick={handleLogout}>
         {user ? "Logout" : "Login"}
       </button>
     </div>

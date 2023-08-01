@@ -6,7 +6,7 @@ function Header() {
   
   return (
     <div className="head">
-      <h1>Wild Tracker</h1>
+      <h1 style={{marginBottom: '0', marginTop: '40px', zIndex: '-1'}}>Wild Tracker</h1>
       <span>
         <NavBar />
       </span>
