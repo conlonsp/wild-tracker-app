@@ -83,25 +83,3 @@ function DonationForm({ orgId, donations, setDonations }) {
 }
 
 export default DonationForm
-
-    // <div>
-    //   <h1>Donation Form</h1>
-    //   <p>{orgId}</p>
-    //   <form onSubmit={handleSubmit}>
-    //     <input
-    //       type='number'
-    //       name='amount'
-    //       placeholder='Amount'
-    //       value={donation.amount}
-    //       onChange={handleChange}
-    //     />
-    //     <input
-    //       type='text'
-    //       name='note'
-    //       placeholder='Note'
-    //       value={donation.note}
-    //       onChange={handleChange}
-    //     />
-    //     <button type='submit'>Submit</button>
-    //   </form>
-    // </div>

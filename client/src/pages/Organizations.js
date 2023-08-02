@@ -52,14 +52,3 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
 }
 
 export default Organizations
-
-
-      {/* {organizations.map(org => {
-        return (
-          <li key={org.id}>
-            <h3>{org.name}</h3>
-            <h4>{org.mission}</h4>
-            <h5>{org.location}</h5>
-          </li>
-        )
-      })} */}

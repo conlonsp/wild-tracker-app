@@ -106,42 +106,6 @@ function UpdateOrg({ organization, onUpdate }) {
       </div>
       }
     </div>
-    // <div className='container'>
-    //   {!isSuccessful ?
-    //     <div>
-    //       <h1>Update an Organization!</h1>
-    //       <form onSubmit={handleSubmit}>
-    //         <input
-    //           type='text'
-    //           name='name'
-    //           value={updated.name}
-    //           onChange={handleChange}
-    //         />
-    //         <input
-    //           type='text'
-    //           name='location'
-    //           value={updated.location}
-    //           onChange={handleChange}
-    //         />
-    //         <textarea
-    //           type='text'
-    //           name='mission'
-    //           value={updated.mission}
-    //           onChange={handleChange}
-    //         />
-    //         <button type='submit'>Submit</button>
-    //       </form>
-    //       {errors.map(err => {
-    //         return (
-    //           <p key={err} style={{color: 'red'}}>{err}</p>
-    //         )
-    //       })}
-    //     </div>
-    //   :
-    //     <h1>Submit Successful!</h1>
-    //   }
-    //   <button onClick={() => navigate(`/organizations/${params.id}`)}>Close</button>
-    // </div>
   )
 }
 

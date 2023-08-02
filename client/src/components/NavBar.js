@@ -41,23 +41,3 @@ function NavBar() {
 }
 
 export default NavBar
-
-    // <span>
-    //   <NavLink
-    //     to='/'
-    //     exact='true'
-    //   >
-    //     Dashboard
-    //   </NavLink>
-    //   <NavLink
-    //     to='/about'
-    //   >
-    //     About
-    //   </NavLink>
-    //   <NavLink
-    //     to='/organizations'
-    //   >
-    //     Organizations
-    //   </NavLink>
-    //   <button onClick={handleLogout}>{user ? "Logout" : "Login"}</button>
-    // </span>
