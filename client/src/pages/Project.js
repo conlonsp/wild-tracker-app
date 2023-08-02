@@ -15,8 +15,9 @@ function Project({ orgId }) {
   }, [])
 
   return (
-    <div class='container images' style={{backgroundImage: `url(${leaves2})`, color: "black"}}>
-        <h3>{project.name}</h3>
+    <div class='images' style={{backgroundImage: `url(${leaves2})`, color: "black"}}>
+      <h3>{project.name}</h3>
+      <div class='container--left'>
         <h6>{project.location}</h6>
         <div class='text-blurb--white'>
           <h5>{project.description}</h5>
@@ -24,6 +25,7 @@ function Project({ orgId }) {
           <h6>End date: {project.end_date}</h6>
         </div>
         <p class='form-button' onClick={() => navigate(`/organizations/${orgId}`)}>back</p>
+      </div>
     </div>
   )
 }

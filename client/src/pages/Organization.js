@@ -17,13 +17,26 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
   const [projPages, setProjPages] = useState(0)
 
   useEffect(() => {
+    fetch(`/organizations/${params.id}`)
+    .then(r => {
+      if(r.ok) {
+        r.json().then(data => {
+          setOrganization(data)
+          grabId(data.id)
+        })
+
+      }
+    })
+  }, [])
+
+  useEffect(() => {
     fetch(`/organizations/${params.id}/projects?page=${projPage}`)
     .then(r => {
       if(r.ok) {
         r.json().then(data => {
-          setOrganization(data.projects[0].organization)
+          // setOrganization(data.projects[0].organization)
           setOrgProjects(data.projects)
-          grabId(data.projects[0].organization_id)
+          // grabId(data.projects[0].organization_id)
           setProjPage(data.page)
           setProjPages(data.pages)
         })
