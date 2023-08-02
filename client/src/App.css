@@ -381,6 +381,20 @@ p.error {
     margin-right: 8px;
   }
 
+  .user-img {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 5px;
+    width: 170px;
+    margin-bottom: 0;
+  }
+
+  .welcome-tag {
+    color: black;
+    margin-top: 5px;
+    font-size: 20px;
+  }
+
 /* style={{fontSize: "25px", marginLeft: '10px', marginRight: '60px'}} */
 
 /* .error {

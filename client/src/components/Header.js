@@ -6,8 +6,6 @@ import { UserContext } from "../Context";
 function Header() {
 
   const { user } = useContext(UserContext)
-
-  console.log(user)
   
   return (
     <div className="head">
