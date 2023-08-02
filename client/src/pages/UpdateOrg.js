@@ -48,14 +48,14 @@ function UpdateOrg({ organization, onUpdate }) {
   }
   
   return (
-    <div class="box-root flex-flex flex-direction--column container images" style={{minHeight: '100vh', flexGrow: '1', backgroundImage: `url(${vine})`}}>
+    <div className="box-root flex-flex flex-direction--column container images" style={{minHeight: '100vh', flexGrow: '1', backgroundImage: `url(${vine})`}}>
       {!isSuccessful ?
-      <div class="formbg-outer">
-        <div class="formbg">
-          <div class="formbg-inner padding-horizontal--48">
-            <span class="padding-bottom--15">Create an Organization</span>
+      <div className="formbg-outer">
+        <div className="formbg">
+          <div className="formbg-inner padding-horizontal--48">
+            <span className="padding-bottom--15">Create an Organization</span>
             <form onSubmit={handleSubmit}>
-              <div class="field">
+              <div className="field">
                 <label>Organization Name</label>
                 <input
                   type='text'
@@ -64,8 +64,8 @@ function UpdateOrg({ organization, onUpdate }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field">
-                <div class="padding-top--10">
+              <div className="field">
+                <div className="padding-top--10">
                   <label>Location</label>
                 </div>
                 <input
@@ -75,8 +75,8 @@ function UpdateOrg({ organization, onUpdate }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field">
-                <div class="padding-top--10">
+              <div className="field">
+                <div className="padding-top--10">
                   <label>Mission</label>
                 </div>
                 <textarea
@@ -86,7 +86,7 @@ function UpdateOrg({ organization, onUpdate }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field padding-bottom--24 padding-top--24 grid--25-75">
+              <div className="field padding-bottom--24 padding-top--24 grid--25-75">
                 <input type='button' name='back' value="<"  onClick={() => navigate(`/organizations/${params.id}`)}/>
                 <input type="submit" name="submit" value="Continue"/>
               </div>
@@ -100,7 +100,7 @@ function UpdateOrg({ organization, onUpdate }) {
         </div>
       </div>
       :
-      <div class="field text-blurb">
+      <div className="field text-blurb">
         <h1 >Update Complete</h1>
         <input type='button' name='back' value={`Back to ${organization.name}`} onClick={() => navigate(`/organizations/${params.id}`)} style={{opacity: 'none'}}/>
       </div>

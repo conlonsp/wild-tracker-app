@@ -23,7 +23,7 @@ function NavBar() {
   return (
     <div className="navbar-container">
       <span className="nav-links">
-        <NavLink to="/" exact className="nav-item">
+        <NavLink to="/" exact="true" className="nav-item">
           Dashboard
         </NavLink>
         <NavLink to="/about" className="nav-item">

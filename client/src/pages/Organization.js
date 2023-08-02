@@ -73,10 +73,10 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
   }
   
   return (
-    <div class="images" style={{backgroundImage: `url(${vine})`, color: "black"}}>
+    <div className="images" style={{backgroundImage: `url(${vine})`, color: "black"}}>
       {user ?
         <div>
-          <div class='container--left' >
+          <div className='container--left' >
             <div>
               <h1>{organization.name}</h1>
               <h3>{organization.mission}</h3>
@@ -89,12 +89,12 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
                   </p>
                 )
               })}
-              <span class='form-container'>
-                <p class='form-button' onClick={() => navigate(`/organizations/${params.id}/update`)}>update</p>
-                <p class='form-button' onClick={deleteOrg}>delete</p>
-                <p class='form-button' onClick={() => navigate('/projects/create')}>new</p>
+              <span className='form-container'>
+                <p className='form-button' onClick={() => navigate(`/organizations/${params.id}/update`)}>update</p>
+                <p className='form-button' onClick={deleteOrg}>delete</p>
+                <p className='form-button' onClick={() => navigate('/projects/create')}>new</p>
               </span>
-              <div class='page-block'>
+              <div className='page-block'>
                 <Pagination
                   siblingRange='5'
                   boundaryRange='1'
@@ -103,10 +103,10 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
                   onPageChange={handlePage}
                 />
               </div>
-              <p class='form-button' onClick={() => navigate('/organizations')}>back</p>
+              <p className='form-button' onClick={() => navigate('/organizations')}>back</p>
             </div>
           </div>
-          <div class='container--right' style={{top: '49%', marginLeft: '60.5%'}}>
+          <div className='container--right' style={{top: '49%', marginLeft: '60.5%'}}>
             <DonationForm
               orgId={organization.id}
               donations={donations}

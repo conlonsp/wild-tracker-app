@@ -39,12 +39,12 @@ function DonationForm({ orgId, donations, setDonations }) {
 
   return (
     <div>
-      <div class="formbg-outer" style={{maxWidth: '1000px'}}>
-        <div class="formbg">
-          <div class="formbg-inner padding-horizontal--48">
-            <span class="padding-bottom--15">Donate</span>
+      <div className="formbg-outer" style={{maxWidth: '1000px'}}>
+        <div className="formbg">
+          <div className="formbg-inner padding-horizontal--48">
+            <span className="padding-bottom--15">Donate</span>
             <form onSubmit={handleSubmit}>
-              <div class="field">
+              <div className="field">
                 <div>
                   <label>Amount</label>
                 </div>
@@ -55,8 +55,8 @@ function DonationForm({ orgId, donations, setDonations }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field">
-                <div class="padding-top--10">
+              <div className="field">
+                <div className="padding-top--10">
                   <label>Note</label>
                 </div>
                 <input
@@ -66,7 +66,7 @@ function DonationForm({ orgId, donations, setDonations }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field padding-bottom--24 padding-top--24">
+              <div className="field padding-bottom--24 padding-top--24">
                 <input type="submit" name="submit" value="Donate"/>
               </div>
               {/* {errors.map(err => {

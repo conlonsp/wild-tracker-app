@@ -59,13 +59,13 @@ function SignupForm({ setToLogin }) {
   return (
     <div style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
       {!isNext ?
-           <div class="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
-           <div class="formbg-outer">
-             <div class="formbg">
-               <div class="formbg-inner padding-horizontal--48">
-                 <span class="padding-bottom--15">Create your account</span>
+           <div className="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
+           <div className="formbg-outer">
+             <div className="formbg">
+               <div className="formbg-inner padding-horizontal--48">
+                 <span className="padding-bottom--15">Create your account</span>
                  <form>
-                   <div class="field">
+                   <div className="field">
                      <label>Username</label>
                      <input
                        type='text'
@@ -74,8 +74,8 @@ function SignupForm({ setToLogin }) {
                        onChange={handleChange}
                      />
                    </div>
-                   <div class="field">
-                     <div class="padding-top--10">
+                   <div className="field">
+                     <div className="padding-top--10">
                        <label>Password</label>
                      </div>
                      <input
@@ -85,8 +85,8 @@ function SignupForm({ setToLogin }) {
                        onChange={handleChange}
                      />
                    </div>
-                   <div class="field">
-                     <div class="padding-top--10">
+                   <div className="field">
+                     <div className="padding-top--10">
                        <label>Password Confirmation</label>
                      </div>
                      <input
@@ -96,15 +96,15 @@ function SignupForm({ setToLogin }) {
                        onChange={handleChange}
                      />
                    </div>
-                   <div class="field padding-bottom--24 padding-top--24">
+                   <div className="field padding-bottom--24 padding-top--24">
                     <input type="submit" name="next" value="Next"onClick={() => setIsNext(true)}/>
                    </div>
                    {errors.map(err => {
                      return (
-                       <p key={err} class='error'>{err}</p>
+                       <p key={err} className='error'>{err}</p>
                      )
                    })}
-                   <div class="footer-link padding-top--24">
+                   <div className="footer-link padding-top--24">
                      <span>
                        Already have an account?
                        &nbsp;
@@ -122,13 +122,13 @@ function SignupForm({ setToLogin }) {
            </div>
          </div>
         :
-        <div class="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
-        <div class="formbg-outer">
-          <div class="formbg">
-            <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Tell us about yourself!</span>
+        <div className="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
+        <div className="formbg-outer">
+          <div className="formbg">
+            <div className="formbg-inner padding-horizontal--48">
+              <span className="padding-bottom--15">Tell us about yourself!</span>
               <form onSubmit={handleSubmit}>
-                <div class="field">
+                <div className="field">
                   <label>Avatar URL</label>
                   <input
                     type='text'
@@ -137,8 +137,8 @@ function SignupForm({ setToLogin }) {
                     onChange={handleChange}
                   />
                 </div>
-                <div class="field">
-                  <div class="padding-top--10">
+                <div className="field">
+                  <div className="padding-top--10">
                     <label>Bio</label>
                   </div>
                   <textarea
@@ -148,16 +148,16 @@ function SignupForm({ setToLogin }) {
                     onChange={handleChange}
                   />
                 </div>
-                <div class="field padding-bottom--24 padding-top--24 grid--25-75">
+                <div className="field padding-bottom--24 padding-top--24 grid--25-75">
                   <input type='button' name='back' value="<" onClick={() => setIsNext(false)}/>
                   <input type="submit" name="submit" value="Continue"/>
                 </div>
                 {errors.map(err => {
                   return (
-                    <p key={err} class='error'>{err}</p>
+                    <p key={err} className='error'>{err}</p>
                   )
                 })}
-                <div class="footer-link padding-top--24">
+                <div className="footer-link padding-top--24">
                   <span>
                     Already have an account?
                     &nbsp;

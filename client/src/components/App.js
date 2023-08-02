@@ -21,7 +21,7 @@ function App() {
 
   const [organizations, setOrganizations] = useState([])
   const [organization, setOrganization] = useState({})
-  const [errors, setErrors] = useState([])
+  // const [errors, setErrors] = useState([])
   const [orgId, setOrgId] = useState(null)
   const [orgProjects, setOrgProjects] = useState([])
   const [donations, setDonations] = useState([])
@@ -53,8 +53,6 @@ function App() {
           setOrgPage(orgs.page)
           setOrgPages(orgs.pages)
         })
-      } else {
-        r.json().then(err => setErrors(err.errors))
       }
     })
   }, [])

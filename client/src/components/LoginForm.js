@@ -48,13 +48,13 @@ function LoginForm({ setToLogin }) {
   }
   
   return (
-    <div class="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
-      <div class="formbg-outer">
-        <div class="formbg">
-          <div class="formbg-inner padding-horizontal--48">
-            <span class="padding-bottom--15">Sign in to your account</span>
+    <div className="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
+      <div className="formbg-outer">
+        <div className="formbg">
+          <div className="formbg-inner padding-horizontal--48">
+            <span className="padding-bottom--15">Sign in to your account</span>
             <form onSubmit={handleSubmit}>
-              <div class="field padding-bottom--24">
+              <div className="field padding-bottom--24">
                 <label>Username</label>
                 <input
                   type='text'
@@ -63,8 +63,8 @@ function LoginForm({ setToLogin }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field padding-bottom--24">
-                <div class="padding-top--15">
+              <div className="field padding-bottom--24">
+                <div className="padding-top--15">
                   <label>Password</label>
                 </div>
                 <input
@@ -74,7 +74,7 @@ function LoginForm({ setToLogin }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field padding-bottom--24 padding-top--24">
+              <div className="field padding-bottom--24 padding-top--24">
                 <input type="submit" name="submit" value="Continue"/>
               </div>
               {errors.map(err => {
@@ -82,7 +82,7 @@ function LoginForm({ setToLogin }) {
                   <p key={err} style={{color: 'red'}}>{err}</p>
                 )
               })}
-              <div class="footer-link padding-top--24">
+              <div className="footer-link padding-top--24">
                 <span>
                   Don't have an account?
                   &nbsp;

@@ -12,28 +12,17 @@ function Dashboard({ donations }) {
         <div>
           <h1>Dashboard</h1>
           <p>Welcome, {user.username}!</p>
-          {/* <ul>
-            {donations ?
-              donations.map(d => {
-                return (
-                  <li key={d.id}>{d.amount} || {d.organization_name}</li>
-                )
-              })
-            : 
-             <p>Start donating to view progress!</p>
-            }
-          </ul> */}
-          {donations ?
-            <div class='text-blurb--white' style={{opacity: '1', backgroundColor: 'grey', color: 'white'}}>
+          {donations.length > 0 ?
+            <div className='text-blurb--white' style={{opacity: '1', backgroundColor: 'grey', color: 'white'}}>
               <Chart donations={donations} />
             </div>
           :
-           <p>Start donating to view progress!</p>
+           <p className='text-blurb--white'>Start donating to view progress!</p>
           }
         </div>
       :
         <div>
-          <p class='text-blurb--white'><em>Log in or Sign up to access Dashboard features!</em></p>
+          <p className='text-blurb--white'><em>Log in or Sign up to access Dashboard features!</em></p>
         </div>
       }
       

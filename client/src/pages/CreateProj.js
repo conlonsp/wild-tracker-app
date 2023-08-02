@@ -59,15 +59,15 @@ function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
   }
 
   return (
-    <div class='images' style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center", backgroundImage: `url(${leaves2})` }}>
+    <div className='images' style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center", backgroundImage: `url(${leaves2})` }}>
     {!isNext ?
-         <div class="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
-         <div class="formbg-outer">
-           <div class="formbg">
-             <div class="formbg-inner padding-horizontal--48">
-               <span class="padding-bottom--15">Create a Project</span>
+         <div className="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
+         <div className="formbg-outer">
+           <div className="formbg">
+             <div className="formbg-inner padding-horizontal--48">
+               <span className="padding-bottom--15">Create a Project</span>
                <form>
-                 <div class="field">
+                 <div className="field">
                    <div>
                     <label>Name</label>
                    </div>
@@ -78,8 +78,8 @@ function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
                      onChange={handleChange}
                    />
                  </div>
-                 <div class="field">
-                   <div class="padding-top--10">
+                 <div className="field">
+                   <div className="padding-top--10">
                      <label>Location</label>
                    </div>
                    <input
@@ -89,8 +89,8 @@ function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
                      onChange={handleChange}
                    />
                  </div>
-                 <div class="field">
-                   <div class="padding-top--10">
+                 <div className="field">
+                   <div className="padding-top--10">
                      <label>Description</label>
                    </div>
                    <textarea
@@ -100,7 +100,7 @@ function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
                      onChange={handleChange}
                    />
                  </div>
-                 <div class="field padding-bottom--24 padding-top--24">
+                 <div className="field padding-bottom--24 padding-top--24">
                   <input type="submit" name="next" value="Next"onClick={() => setIsNext(true)}/>
                  </div>
                  {errors.map(err => {
@@ -115,13 +115,13 @@ function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
          </div>
        </div>
       :
-      <div class="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
-      <div class="formbg-outer">
-        <div class="formbg">
-          <div class="formbg-inner padding-horizontal--48">
+      <div className="box-root flex-flex flex-direction--column container" style={{minHeight: '100vh', flexGrow: '1'}}>
+      <div className="formbg-outer">
+        <div className="formbg">
+          <div className="formbg-inner padding-horizontal--48">
             <span class="padding-bottom--15">What are the dates?</span>
             <form onSubmit={handleSubmit}>
-              <div class="field">
+              <div className="field">
                 <label>Start Date</label>
                 <input
                   type='text'
@@ -131,8 +131,8 @@ function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field">
-                <div class="padding-top--10">
+              <div className="field">
+                <div className="padding-top--10">
                   <label>End Date</label>
                 </div>
                 <input
@@ -143,7 +143,7 @@ function CreateProj({ orgId, orgProjects, setOrgProjects, organizations }) {
                   onChange={handleChange}
                 />
               </div>
-              <div class="field padding-bottom--24 padding-top--24 grid--25-75">
+              <div className="field padding-bottom--24 padding-top--24 grid--25-75">
                 <input type='button' name='back' value="<" onClick={() => setIsNext(false)}/>
                 <input type="submit" name="submit" value="Continue"/>
               </div>

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../Context";
 import { Pagination } from "semantic-ui-react"
@@ -22,7 +22,7 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
   return (
     <div className='images' style={{backgroundImage: `url(${plantVase})`, color: 'black'}}>
       <h1 style={{marginTop: "155px", fontSize: '60px'}}><em>Our Partners...</em></h1>
-      <div class='container--right'>
+      <div className='container--right'>
         <div>
           {organizations.map(org => {
             return (
@@ -32,7 +32,7 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
             )
           })}
         </div>
-        <div class='page-block'>
+        <div className='page-block'>
           <Pagination
             siblingRange='5'
             boundaryRange='1'
@@ -42,7 +42,7 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
           />
         </div>
         {user ?
-          <p class='form-button' onClick={() => navigate('/organizations/new')}>create</p>
+          <p className='form-button' onClick={() => navigate('/organizations/new')}>create</p>
         :
           null
         }

@@ -15,16 +15,16 @@ function Project({ orgId }) {
   }, [])
 
   return (
-    <div class='images' style={{backgroundImage: `url(${leaves2})`, color: "black"}}>
+    <div className='images' style={{backgroundImage: `url(${leaves2})`, color: "black"}}>
       <h3>{project.name}</h3>
-      <div class='container--left'>
+      <div className='container--left'>
         <h6>{project.location}</h6>
-        <div class='text-blurb--white'>
+        <div className='text-blurb--white'>
           <h5>{project.description}</h5>
           <h6>Start date: {project.start_date}</h6>
           <h6>End date: {project.end_date}</h6>
         </div>
-        <p class='form-button' onClick={() => navigate(`/organizations/${orgId}`)}>back</p>
+        <p className='form-button' onClick={() => navigate(`/organizations/${orgId}`)}>back</p>
       </div>
     </div>
   )
