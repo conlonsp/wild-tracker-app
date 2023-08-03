@@ -15,7 +15,7 @@ function Dashboard({ donations }) {
              <img src={user.avatar_url} className='user-img'></img>
             <p className='welcome-tag'>Welcome, {user.username}!</p>
             {donations.length > 0 ?
-              <div className='text-blurb--white' style={{opacity: '1', backgroundColor: 'grey', color: 'white'}}>
+              <div className='container--chart' >
                 <Chart donations={donations} />
               </div>
             :
@@ -33,3 +33,5 @@ function Dashboard({ donations }) {
 }
 
 export default Dashboard
+
+// chart styling: style={{opacity: '1', backgroundColor: 'grey', color: 'white'}}

@@ -124,6 +124,26 @@
   transform: translateY(-50%); /* Center the container vertically */
 }
 
+.container--chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Additional settings */
+  position: absolute;
+  top: 65%; /* Move the container down by 50% of the viewport height */
+  margin-left: 2%;
+  width: flex;
+  /* height: 60%; */
+  transform: translateY(-50%); /* Center the container vertically */
+  border: 1px solid #ddd;
+  background-image: linear-gradient(to bottom left, rgba(10, 10, 10, 0.9), rgba(86, 114, 75, 0.9));
+  border-radius: 20%;
+  padding: 50px;
+}
+
+
 .container {
   display: flex;
   flex-direction: column;
