@@ -81,20 +81,6 @@
   background-color: #dcdcdc;
 }
 
-/* .container--right {
-  display: flex; */
-  /* flex-direction: flex-start; */
-  /* justify-content: flex-start;
-  align-items: flex-start; */
-
-  /* Additional settings */
-  /* position: absolute; */
-  /* top: 50%; Move the container down by 50% of the viewport height */
-  /* right: 0;
-  width: 100%; */
-  /* transform: translateY(-50%); Center the container vertically */
-/* } */
-
 .container--right {
   display: flex;
   flex-direction: column;
@@ -132,15 +118,17 @@
 
   /* Additional settings */
   position: absolute;
-  top: 65%; /* Move the container down by 50% of the viewport height */
-  margin-left: 2%;
+  top: 64%; /* Move the container down by 50% of the viewport height */
+  margin-left: 65%;
   width: flex;
   /* height: 60%; */
   transform: translateY(-50%); /* Center the container vertically */
   border: 1px solid #ddd;
   background-image: linear-gradient(to bottom left, rgba(10, 10, 10, 0.9), rgba(86, 114, 75, 0.9));
-  border-radius: 20%;
-  padding: 50px;
+  border-radius: 30px;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 
@@ -401,7 +389,35 @@ p.error {
     margin-right: 8px;
   }
 
+  .dashboard-content {
+    position: relative;
+  }
+  
+  .user-info {
+    position: relative;
+  }
+  
+  .user-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  
   .user-img {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 5px;
+    width: 170px;
+  }
+  
+  .welcome-tag {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* .user-img {
     border: 1px solid #ddd;
     border-radius: 50%;
     padding: 5px;
@@ -414,6 +430,20 @@ p.error {
     margin-top: 5px;
     font-size: 20px;
   }
+
+  .user-info {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80%;
+  } */
+  
+  /* .user-details {
+    margin-left: 15px;
+  } */
 
 /* style={{fontSize: "25px", marginLeft: '10px', marginRight: '60px'}} */
 
