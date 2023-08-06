@@ -115,18 +115,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   /* Additional settings */
   position: absolute;
-  top: 64%; /* Move the container down by 50% of the viewport height */
-  margin-left: 65%;
+  top: 70%;
+  margin-left: 30%;
   width: flex;
-  /* height: 60%; */
-  transform: translateY(-50%); /* Center the container vertically */
+  transform: translateY(-50%);
   border: 1px solid #ddd;
   background-image: linear-gradient(to bottom left, rgba(10, 10, 10, 0.9), rgba(86, 114, 75, 0.9));
   border-radius: 30px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
   flex-wrap: wrap;
   flex-direction: column;
 }
@@ -395,6 +397,7 @@ p.error {
   
   .user-info {
     position: relative;
+    text-align: center;
   }
   
   .user-center {
@@ -409,12 +412,33 @@ p.error {
     border-radius: 50%;
     padding: 5px;
     width: 170px;
+    margin-bottom: 0;
   }
   
   .welcome-tag {
     color: black;
     font-size: 20px;
     text-align: center;
+    margin-top: 0;
+  }
+
+  .donation-notes {
+    color: black;
+    position: absolute;
+    top: -220px;
+    left: 67%;
+    right: 10%;
+    width: 25%;
+  }
+
+  .donation-item {
+    color: black;
+    position: absolute;
+    top: -200px;
+    left: 67%;
+    right: 10%;
+    width: 25%;
+    line-height: 10px;
   }
 
   /* .user-img {

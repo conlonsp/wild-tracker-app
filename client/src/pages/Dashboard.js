@@ -5,7 +5,20 @@ import fernSpine from '../images/fern-spine.jpg'
 
 function Dashboard({ donations }) {
   const { user } = useContext(UserContext)
-  console.log(user)
+
+  let donationNotes = donations.map(d => {
+    if(d.note === '') {
+      return null
+    } else {
+      return d.note
+    }
+  })
+
+  let filterNotes = donationNotes.filter(d => d !== null)
+
+  let notes = filterNotes.slice(0, 3)
+
+  let noteList = notes.map(n => <p>{n}</p>)
 
   return (
     <div className="images" style={{backgroundImage: `url(${fernSpine})`}}>
@@ -16,11 +29,21 @@ function Dashboard({ donations }) {
             <div className="user-info">
               <img src={user.avatar_url} className="user-img" />
               <p className="welcome-tag">Welcome, {user.username}!</p>
-              <h3 style={{ color: 'black', position: 'absolute', top: '-45px', left: '5%', right: '80%' }}>"{user.bio}"</h3>
+              <h3 style={{ color: 'black', position: 'absolute', top: '-60px', left: '5%', right: '80%' }}>"{user.bio}"</h3>
             </div>
             {donations.length > 0 ?
-              <div className='container--chart' >
-                <Chart donations={donations} />
+              <div>
+                <div className='container--chart' >
+                  <Chart donations={donations} />
+                </div>
+                <div className='user-info'>
+                  <h3 className='donation-notes'>Last 3 Donation Notes:</h3>
+                 {filterNotes.length === 0 ?
+                    <p className='donation-item' style={{paddingTop: '20px'}}>Add notes to your donations to view!</p>
+                  :
+                    <p className='donation-item'>{noteList}</p>
+                  }
+                </div>
               </div>
             :
             <p className='text-blurb--white'>Start donating to view progress!</p>
@@ -37,7 +60,3 @@ function Dashboard({ donations }) {
 }
 
 export default Dashboard
-
-// style={{color: 'black', width: '20%', marginLeft: '70%'}}
-
-// chart styling: style={{opacity: '1', backgroundColor: 'grey', color: 'white'}}
