@@ -24,7 +24,10 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
           setOrganization(data)
           grabId(data.id)
         })
-
+      } else {
+        r.json().then(err => {
+          setErrors(err.errors)
+        })
       }
     })
   }, [])
@@ -115,7 +118,7 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
           </div>
         </div>
       :
-        <p>{errors}</p>
+        <h1 className='container--left' style={{marginTop: '-5%'}}>{errors}</h1>
       }
     </div>
   )
