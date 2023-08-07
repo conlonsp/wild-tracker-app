@@ -143,7 +143,7 @@ function SignupForm({ setToLogin }) {
                   </div>
                   <textarea
                     type='bio'
-                    name='Bio'
+                    name='bio'
                     value={newUser.bio}
                     onChange={handleChange}
                   />
