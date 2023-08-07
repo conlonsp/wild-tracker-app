@@ -21,7 +21,7 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
 
   return (
     <div className='images' style={{backgroundImage: `url(${plantVase})`, color: 'black'}}>
-      <h1 style={{marginTop: "155px", fontSize: '60px'}}><em>Our Partners...</em></h1>
+      <h1 style={{marginTop: "155px", fontSize: '60px'}}>Our Partners</h1>
       <div className='container--right'>
         <div>
           {organizations.map(org => {
