@@ -34,13 +34,25 @@ You can use the following commands to run the application:
 - `npm start --prefix client`: run the frontend on
   [http://localhost:4000](http://localhost:4000)
 
-Make sure to uncomment the seed seed data in **db/seeds.rb** and run:
+Make sure to uncomment the seed data in **db/seeds.rb** and seed the data by running the command:
 
 - `rails db:seed`
 
-to seed data.  Once the data has been seeded, make sure to comment back out the seed data.
+Once the data has been seeded, make sure to comment back out the seed data.
 
 ## How to Use
+
+Wild Tracker allows for user's to interact with organizations and their projects, and track their donation efforts to the varied organizations.  To start, you will want to create an account.
+
+### Signing in and Signup up
+
+Creating an account is simple.  After navigating to the site, click the **Sign Up** button located at the bottom of the log in form.
+
+If you already have an account, enter your login credentials to sign in.
+
+In the Sign Up form, create a username and password, and click the **Next** button.  From here, add an avatar URL and write a 50 to 250 character bio.  Once complete, you can then click **Submit** to create your account.  If there are any errors that arose during account creation, you will be notified and asked to fix the presented errors
+
+### Dashboard
 
 
 
