@@ -38,15 +38,17 @@ function Dashboard({ donations }) {
                 </div>
                 <div className='user-info'>
                   <h3 className='donation-notes'>Last 3 Donation Notes:</h3>
-                 {filterNotes.length === 0 ?
-                    <p className='donation-item' style={{paddingTop: '20px'}}>Add notes to your donations to view!</p>
-                  :
-                    <p className='donation-item'>{noteList}</p>
-                  }
+                  <p className='donation-item'>{noteList}</p>
                 </div>
               </div>
             :
-            <p className='text-blurb--white'>Start donating to view progress!</p>
+            <div>
+              <p className='text-blurb--white' style={{marginTop: '5%'}}>Start donating to view progress!</p>
+              <div className='user-info' style={{marginTop: '-10%'}}>
+                <h3 className='donation-notes'>Last 3 Donation Notes:</h3>
+                <p className='donation-item' style={{paddingTop: '20px'}}>Add notes to your donations to view!</p>
+              </div>
+            </div>
             }
           </div>
         :
