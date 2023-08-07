@@ -44,7 +44,7 @@ function Dashboard({ donations }) {
             :
             <div>
               <p className='text-blurb--white' style={{marginTop: '5%'}}>Start donating to view progress!</p>
-              <div className='user-info' style={{marginTop: '-10%'}}>
+              <div className='user-info' style={{marginTop: '-140px'}}>
                 <h3 className='donation-notes'>Last 3 Donation Notes:</h3>
                 <p className='donation-item' style={{paddingTop: '20px'}}>Add notes to your donations to view!</p>
               </div>
