@@ -16,13 +16,15 @@ function Project({ orgId }) {
 
   return (
     <div className='images' style={{backgroundImage: `url(${leaves2})`, color: "black"}}>
-      <h3>{project.name}</h3>
+      <div className='container--left' style={{color: 'black', top: '15%', fontSize: '50px'}}>
+        <h3 style={{marginTop: '45%', marginBottom: '0', width: '200%'}}>{project.name}</h3>
+        <h6 style={{marginTop: '0'}}>{project.location}</h6>
+      </div>
       <div className='container--left'>
-        <h6>{project.location}</h6>
-        <div className='text-blurb--white'>
-          <h5>{project.description}</h5>
-          <h6>Start date: {project.start_date}</h6>
-          <h6>End date: {project.end_date}</h6>
+        <div style={{width: '100%', padding: '5%'}}>
+          <h3>{project.description}</h3>
+          <h4>Start date: {project.start_date}</h4>
+          <h4>End date: {project.end_date}</h4>
         </div>
         <p className='form-button' onClick={() => navigate(`/organizations/${orgId}`)}>back</p>
       </div>
