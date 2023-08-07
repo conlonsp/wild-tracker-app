@@ -16,7 +16,7 @@ function Dashboard({ donations }) {
 
   let filterNotes = donationNotes.filter(d => d !== null)
 
-  let notes = filterNotes.slice(0, 3)
+  let notes = filterNotes.slice(-3)
 
   let noteList = notes.map(n => <p>{n}</p>)
 
