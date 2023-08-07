@@ -44,7 +44,8 @@ function Organizations({ organizations, setOrganizations, page, setPage, pages }
         {user ?
           <p className='form-button' onClick={() => navigate('/organizations/new')}>create</p>
         :
-          null
+          
+          <p style={{paddingTop: '33px'}}/>
         }
       </div>
     </div>
