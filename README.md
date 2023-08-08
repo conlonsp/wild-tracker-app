@@ -54,7 +54,32 @@ In the Sign Up form, create a username and password, and click the **Next** butt
 
 ### Dashboard
 
+The Dashboard contains information about yourself as a user.  From here, your donations made will be tracked as well as any notes that you've attached to those donations.
 
+### Organizations
+
+The Organizations page is where things start to get a bit more exciting.  A list of organizations will be shown that can be cycled through.  Click the **pagination bar** at the bottom in order to cycle through the different organizations.  If logged in, click the **Create** button to create a new organization.
+
+### Organization Creation
+
+To create an organization, type a name, location, and description in the appropriate fields and click **Submit**.
+
+### Viewing an Organization
+
+Back in the Organizations page, click on any of the organization's listed to view them.  You can then view the organization's mission statement, their associated projects, update and delete the organization, as well as create a new project under that organization.  You can donate to the organization by locating the donation form, adding an amount to donate, and adding a note to say 'Thanks!'.
+
+### Viewing a Project
+
+Click on any of the projects listed under an organization to view it.  Inside the project page, you will see the project's name, mission statement, location, start and end dates.
+
+### Future Implementation
+
+Upcoming additions to Wild Tracker include:
+
+- Updating user profile
+- Account deletion
+- Search bar and drop down menu for looking up organizations and projects
+- Interactive donation tracking
 
 ## Environment Setup
 
