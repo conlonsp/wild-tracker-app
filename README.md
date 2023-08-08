@@ -44,7 +44,7 @@ Once the data has been seeded, make sure to comment back out the seed data.
 
 Wild Tracker allows for user's to interact with organizations and their projects, and track their donation efforts to the varied organizations.  To start, you will want to create an account.
 
-### Signing in and Signup up
+### Signing in and Signing up
 
 Creating an account is simple.  After navigating to the site, click the **Sign Up** button located at the bottom of the log in form.
 
