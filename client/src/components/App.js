@@ -11,7 +11,6 @@ import About from '../pages/About';
 import Organizations from '../pages/Organizations';
 import Organization from '../pages/Organization';
 import Project from '../pages/Project';
-import Footer from './Footer';
 import CreateOrg from "../pages/CreateOrg";
 import UpdateOrg from "../pages/UpdateOrg";
 import CreateProj from "../pages/CreateProj"
@@ -21,7 +20,6 @@ function App() {
 
   const [organizations, setOrganizations] = useState([])
   const [organization, setOrganization] = useState({})
-  // const [errors, setErrors] = useState([])
   const [orgId, setOrgId] = useState(null)
   const [orgProjects, setOrgProjects] = useState([])
   const [donations, setDonations] = useState([])
@@ -137,7 +135,6 @@ function App() {
           />
         }/>
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 }

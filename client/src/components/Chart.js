@@ -12,9 +12,6 @@ function Chart({ donations }) {
     const width = 500 - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
 
-    // Clear existing SVG content
-    d3.select(svgRef.current).selectAll('*').remove();
-
     const svg = d3.select(svgRef.current)
       .append("svg")
       .attr("width", width + margin.left + margin.right)
@@ -51,7 +48,6 @@ function Chart({ donations }) {
       .attr("height", d => height - y(d.amount))
       .attr("fill", "#69b3a2");
 
-    // Clean up function to remove SVG content when component unmounts or donations change
     return () => {
       d3.select(svgRef.current).selectAll('*').remove();
     };

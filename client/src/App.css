@@ -6,14 +6,14 @@
 
 .images {
   background-repeat: no-repeat;
-  background-size: 100% 100%; /* This will scale the image to cover the entire container */
+  background-size: 100% 100%;
   background-position: center center;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Set a fixed width to ensure the image stays the same size */
-  height: 100%; /* Set a fixed height to ensure the image stays the same size */
-  z-index: -1; /* Move the background behind other elements in the page */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .foot {
@@ -86,14 +86,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* Additional settings */
   position: absolute;
-  top: 60%; /* Move the container down by 50% of the viewport height */
+  top: 60%;
   margin-left: 60%;
   height: 40%;
   width: 25%;
-  transform: translateY(-50%); /* Center the container vertically */
+  transform: translateY(-50%);
 }
 
 .container--left {
@@ -101,13 +99,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* Additional settings */
   position: absolute;
-  top: 55%; /* Move the container down by 50% of the viewport height */
+  top: 55%;
   margin-left: 10%;
   width: 40%;
-  transform: translateY(-50%); /* Center the container vertically */
+  transform: translateY(-50%);
 }
 
 .container--chart {
@@ -116,8 +112,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  /* Additional settings */
   position: absolute;
   top: 70%;
   margin-left: 30%;
@@ -139,13 +133,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* Additional settings */
   position: absolute;
-  top: 50%; /* Move the container down by 50% of the viewport height */
+  top: 50%;
   left: 0;
   width: 100%;
-  transform: translateY(-50%); /* Center the container vertically */
+  transform: translateY(-50%);
 }
 
 .formbg-outer {
@@ -383,12 +375,10 @@ p.error {
   }
 
   .button-container {
-    /* Optional: Add margin or padding between the buttons for spacing */
     margin-right: 10px;
   }
 
   .form-button:not(:last-child) {
-    /* Add margin between the buttons to separate them */
     margin-right: 8px;
   }
 
@@ -405,7 +395,6 @@ p.error {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
   }
   
   .user-img {
@@ -443,103 +432,5 @@ p.error {
     line-height: 10px;
   }
 
-  /* .user-img {
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    padding: 5px;
-    width: 170px;
-    margin-bottom: 0;
-  }
 
-  .welcome-tag {
-    color: black;
-    margin-top: 5px;
-    font-size: 20px;
-  }
-
-  .user-info {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 15px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 80%;
-  } */
   
-  /* .user-details {
-    margin-left: 15px;
-  } */
-
-/* style={{fontSize: "25px", marginLeft: '10px', marginRight: '60px'}} */
-
-/* .error {
-  color: red;
-  padding: none
-} */
-
-/* .align-center {
-  align-items: center; 
-}
-.center-center {
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .navbar-container {
-  display: flex;
-  justify-content: space-between;
-  background-color: #333;
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-item {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.nav-item:hover:not(.active) {
-  background-color: #111;
-}
-
-.nav-item.active {
-  background-color: #04AA6D;
-}
-
-.logout-button {
-  background-color: #333;
-  color: white;
-  border: none;
-  margin: 0;
-  padding: 14px 16px;
-  cursor: pointer;
-} */
-
-/* .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
-
-/* background-color: rgb(84, 105, 212); */
-
-/* .formbg {
-  margin: 0px auto;
-  width: 100%;
-  max-width: 448px;
-  background: white;
-  border-radius: 4px;
-  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-} */

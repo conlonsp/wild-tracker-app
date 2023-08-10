@@ -37,9 +37,7 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
     .then(r => {
       if(r.ok) {
         r.json().then(data => {
-          // setOrganization(data.projects[0].organization)
           setOrgProjects(data.projects)
-          // grabId(data.projects[0].organization_id)
           setProjPage(data.page)
           setProjPages(data.pages)
         })
@@ -66,7 +64,6 @@ function Organization({ organization, setOrganization, onDelete, grabId, orgProj
       if(r.ok) {
         onDelete(organization.id)
         navigate('/organizations')
-        // setDonations(prev => prev.id !== )
       } else {
         r.json().then(err => {
           setErrors(err.errors)

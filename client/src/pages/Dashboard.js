@@ -27,7 +27,7 @@ function Dashboard({ donations }) {
         {user ?
           <div>
             <div className="user-info">
-              <img src={user.avatar_url} className="user-img" />
+              <img src={user.avatar_url} alt='user-img' className="user-img" />
               <p className="welcome-tag">Welcome, {user.username}!</p>
               <h3 style={{ color: 'black', position: 'absolute', top: '-60px', left: '5%', right: '80%' }}>"{user.bio}"</h3>
             </div>
